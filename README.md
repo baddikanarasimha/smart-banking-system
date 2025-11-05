@@ -121,12 +121,18 @@ Navigate to:
 - Withdraw: validates sufficient funds; logs transaction
 - Transfer: between two account numbers; logs both sides appropriately
 
+- <img width="936" height="352" alt="Dashbord" src="https://github.com/user-attachments/assets/1ea02821-f90b-4fd2-b331-4d2441bc5ad5" />
+
+
 ### Transactions & Statements
 - Full history table with type, from, to, amount, timestamp
 - Download PDF statement:
   - Transactions page: date-range form + Download button
   - Dashboard: Statement (PDF) quick action
   - Direct endpoint: `/statement.pdf?from=YYYY-MM-DD&to=YYYY-MM-DD` (defaults to last 30 days if omitted)
+ 
+  - <img width="932" height="441" alt="Transaction-History" src="https://github.com/user-attachments/assets/0b024406-7fbe-4d68-ae41-0a9c5e4a8a85" />
+
 
 ### Analytics (Last 30 Days)
 - Endpoint: `/analytics/data` returns JSON with:
@@ -141,6 +147,9 @@ Navigate to:
   - Pie: Totals
 - Transactions page chart:
   - Line: Credits vs Debits
+ 
+  - <img width="554" height="437" alt="Transaction-Analysis" src="https://github.com/user-attachments/assets/5170c5ed-f06c-4a7f-9196-14bd106bd917" />
+
 
 ## API Endpoints (User-facing pages)
 - `GET /register`, `POST /register`
