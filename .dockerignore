@@ -1,0 +1,14 @@
+# Context minimization
+.git
+.gitignore
+README.md
+**/.idea/
+**/.vscode/
+**/*.iml
+
+# Build outputs
+/target/
+
+# OS
+.DS_Store
+Thumbs.db

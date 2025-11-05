@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: smart-banking-system
+    env: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /login
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+    autoDeploy: true

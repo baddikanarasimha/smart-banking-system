@@ -1,4 +1,27 @@
 # Smart Banking System
+## Deploy to Render
+This project includes Dockerfile and render.yaml for easy deployment.
+
+Steps:
+1. Push this repo to GitHub (done).
+2. Create a database (Render Managed MySQL or Railway MySQL) and note credentials.
+3. On https://render.com → New → Web Service → Connect this GitHub repo.
+   - Environment: Docker
+   - Health check path: `/login`
+4. Set environment variables on the service:
+   - `SPRING_DATASOURCE_URL=jdbc:mysql://<HOST>:<PORT>/<DB>?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC`
+   - `SPRING_DATASOURCE_USERNAME=<USER>`
+   - `SPRING_DATASOURCE_PASSWORD=<PASS>`
+   - (Optional) `PORT=8080` (Render sets this automatically)
+5. Click Create Web Service and wait for the first deploy to finish.
+
+Notes:
+- Application reads `server.port=${PORT:8080}` and runs on the port provided by Render.
+- If you see DB errors, verify firewall/allowlist and credentials in env vars.
+- For local Docker test:
+  - `docker build -t smart-banking .`
+  - `docker run -p 8080:8080 -e SPRING_DATASOURCE_URL=... -e SPRING_DATASOURCE_USERNAME=... -e SPRING_DATASOURCE_PASSWORD=... smart-banking`
+
 
 Tech: Spring Boot, Spring Security, Spring Data JPA, Thymeleaf, MySQL, Maven
 
