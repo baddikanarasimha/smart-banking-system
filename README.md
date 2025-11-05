@@ -113,6 +113,9 @@ Navigate to:
 - Role-based: `USER` (admin panel intentionally removed/disabled for this build)
 - CSRF disabled for simplicity of demo; enable it for production
 
+- <img width="292" height="361" alt="Register-Page" src="https://github.com/user-attachments/assets/0de06914-bea3-41c3-8e4e-6990120d043a" />
+
+
 ### Money Operations
 - Deposit: increases balance and logs transaction
 - Withdraw: validates sufficient funds; logs transaction
